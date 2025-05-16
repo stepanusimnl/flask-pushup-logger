@@ -1,1 +1,16 @@
-<h1>Home Page</h1>
+{% extends "base.html" %} {% block head %} {{super()}} 
+<link rel="stylesheet" href="{{url_for('static', filename="extended-beauty.css")}}"> 
+{% endblock %}
+
+{% block content %}
+<h1>Hello!</h1>
+<center>
+    <img src="{{url_for('static', filename="images/pushup.png")}}" 
+        alt="Push Up Guy"
+        height="200px">
+</center>
+<p>
+    Welcome to pushups-logger. This website implements basic CRUD Function and user
+    authentication features using Flask.
+</p>
+{%endblock%}
