@@ -10,11 +10,6 @@
     action="{{ url_for('main.update_workout', workout_id=workout.id) }}"
   >
     <h2>Update Workout</h2>
-    {% with messages = get_flashed_messages() %} {% if messages %}
-    <div class="notification is-danger">
-      {{ messages[0] }}
-    </div>
-    {% endif %} {% endwith %}
     <div class="form-group">
       <label for="pushup">Push-Ups</label>
       <input
